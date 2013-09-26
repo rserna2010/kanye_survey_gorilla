@@ -1,0 +1,24 @@
+<h1>Create your Kanvey</h1>
+
+<%= form_for @survey do |f| %>  
+  <%= f.label :Title %>
+  <%= f.text_field :title %>
+<br>
+
+  <%= f.fields_for :questions do |question_fields| %>
+    your question: <%= question_fields.text_field :prompt %> <br>
+
+    <% 1.times do %>  
+      <%= question_fields.fields_for :options, @question.options do |option_fields| %>
+    your option: <%= option_fields.text_field :content %><br>
+  <% end %>
+  <% end %>
+  <br>
+  <%end %>
+
+<%= f.submit "Yeezy Baby!"%>
+<% end %>
+
+
+
+ 

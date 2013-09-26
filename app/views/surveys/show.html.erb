@@ -1,0 +1,12 @@
+<h1><%= @current_survey.title %></h1>
+
+<ol>
+  <% @current_survey.questions.each do |question| %>
+    <li><%= question.prompt %></li>
+    <ul>
+    <% question.options.each do |option| %>
+    <li><%= option.content %></li>
+    <% end %>
+    </ul>
+  <% end %>
+</ol>
