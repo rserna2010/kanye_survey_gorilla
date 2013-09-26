@@ -11,7 +11,6 @@ describe SurveysController do
 
     it "Should render all survey questions" do  
       visit surveys_path
-      save_and_open_page
       page.should have_content("Kanyevey")
     end
 

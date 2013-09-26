@@ -2,6 +2,7 @@ Kanyevey::Application.routes.draw do
 
 
  resources :surveys, only: [:index, :new, :create, :show]
+ root :to =>'Surveys#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

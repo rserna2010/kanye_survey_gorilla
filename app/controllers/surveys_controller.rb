@@ -8,10 +8,9 @@ class SurveysController < ApplicationController
     @question = Question.new
     @option = Option.new
    
-    @survey.questions << @question
-    @question.options << @option
-    @question.options << @option
-    @question.options << @option
+    2.times{@survey.questions << @question}
+    3.times{@question.options << @option}
+    
   end
 
   def create
